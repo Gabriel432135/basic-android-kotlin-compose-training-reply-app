@@ -16,6 +16,7 @@
 package com.example.reply.ui
 
 import android.app.Activity
+import androidx.activity.compose.LocalActivity
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -116,7 +117,7 @@ fun ReplyListAndDetailContent(
                 )
             }
         }
-        val activity = LocalContext.current as Activity
+        val activity = LocalActivity
         ReplyDetailsScreen(
             replyUiState = replyUiState,
             modifier = Modifier
