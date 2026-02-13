@@ -15,6 +15,7 @@
  */
 package com.example.reply.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.activity.compose.LocalActivity
 import androidx.annotation.DrawableRes
@@ -87,6 +88,7 @@ fun ReplyListOnlyContent(
     }
 }
 
+@SuppressLint("ContextCastToActivity")
 @Composable
 fun ReplyListAndDetailContent(
     replyUiState: ReplyUiState,
