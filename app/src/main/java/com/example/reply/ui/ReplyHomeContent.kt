@@ -46,6 +46,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -120,9 +121,11 @@ fun ReplyListAndDetailContent(
             }
         }
         val activity = LocalContext.current as Activity
+        val detailsScreenTag = stringResource(R.string.details_screen)
         ReplyDetailsScreen(
             replyUiState = replyUiState,
             modifier = Modifier
+                .testTag(detailsScreenTag)
                 .padding(top = dimensionResource(R.dimen.email_list_item_vertical_spacing))
                 .weight(1f),
             onBackPressed = {activity.finish()}
